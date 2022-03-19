@@ -12,6 +12,9 @@ class UnsplashApiService {
 
   String feedQuery = "photos?query=random&per_page=30&client_id=$apiKey";
 
+  String errorLogo = "https://www.computerhope.com/jargon/e/error.png";
+
+
   late Dio _dio;
 
   UnsplashApiService() {

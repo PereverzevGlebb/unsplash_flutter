@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../service/UnsplashApiService.dart';
-import '../PhotoItem.dart';
+import '../common/PhotoItem.dart';
 
 
 class PhotoFeedPage extends StatefulWidget {
