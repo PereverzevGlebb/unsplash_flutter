@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unsplash_photo/ui/feed/PhotoFeedPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,11 +8,12 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: PhotoFeedPage(),
+    );
   }
-
-
 }
