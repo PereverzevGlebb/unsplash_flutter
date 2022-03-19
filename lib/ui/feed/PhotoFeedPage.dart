@@ -17,6 +17,16 @@ class _PhotoFeedPage extends State<PhotoFeedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          title: const Text('Photo Feed'),
+          actions: [
+            // Navigate to the Search Screen
+            IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.search))
+          ],
+        ),
         body: getPhotosFeed()
     );
   }
