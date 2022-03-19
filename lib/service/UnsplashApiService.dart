@@ -33,4 +33,17 @@ class UnsplashApiService {
     }
     return null;
   }
+
+  Future<List<PhotoPostResult>?> fetchSearchResult(String searchKey) async {
+    try {
+      Response response = await _dio.get(baseUrl + searchIndex + "photos?query=$searchKey&per_page=30&client_id=$apiKey");
+      PhotoCardModel photoCardModel = PhotoCardModel.fromJson(response.data);
+      return photoCardModel.results;
+    } on DioError catch (e) {
+      if (kDebugMode){
+        print(e);
+      }
+    }
+    return null;
+  }
 }
