@@ -45,7 +45,15 @@ class _SearchScreen extends State<SearchScreen> {
               ),
             ),
           )),
-      body: getSearchRes(searchQuery),
+      body: searchQuery.isNotEmpty
+          ? getSearchRes(searchQuery)
+          : const Center(
+              child: Text(
+                "Enter what do you want to find \n or check is your query is correct:)",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
     );
   }
 
