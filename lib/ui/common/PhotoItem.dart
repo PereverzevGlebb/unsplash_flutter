@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unsplash_photo/service/UnsplashApiService.dart';
 import '../../model/PhotoCardResult.dart';
 import 'DetailScreen.dart';
 
@@ -25,7 +26,7 @@ class PhotoItem extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: NetworkImage(photo?.urls?.full ?? ""),
+                      image: NetworkImage(photo?.urls?.full ?? UnsplashApiService().errorLogo),
                     ),
                   ),
                 )
