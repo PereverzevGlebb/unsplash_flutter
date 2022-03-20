@@ -1,6 +1,6 @@
 # unsplash_photo
 
-A new Flutter project.
+Actual branch is develop
 
 ## Getting Started
 
